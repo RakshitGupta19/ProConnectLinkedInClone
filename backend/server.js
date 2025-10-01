@@ -15,6 +15,10 @@ app.use(express.json());
 app.use(postRoutes);
 app.use(userRoutes);
 
+app.get('/dummy', (req, res) => {
+    res.json({ message: "Hello World" })
+});
+
 app.use(express.static('uploads'));
 
 const start = async () => {
